@@ -60,5 +60,4 @@ class AuthorizationServerConfiguration extends AuthorizationServerConfigurerAdap
     public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
         security.allowFormAuthenticationForClients();
     }
-
 }

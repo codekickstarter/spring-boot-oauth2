@@ -31,17 +31,12 @@ public class UserDetailsService implements org.springframework.security.core.use
         log.debug("Authenticating {}", login);
         String lowercaseLogin = login.toLowerCase();
 
-        User userFromDatabase;
-        if(lowercaseLogin.contains("@")) {
-            userFromDatabase = userRepository.findByEmail(lowercaseLogin);
-        } else {
-            userFromDatabase = userRepository.findByUsernameCaseInsensitive(lowercaseLogin);
-        }
+        User userFromDatabase = userRepository.findByEmail(lowercaseLogin);
 
         if (userFromDatabase == null) {
             throw new UsernameNotFoundException("User " + lowercaseLogin + " was not found in the database");
         } else if (!userFromDatabase.isActivated()) {
-            throw new UserNotActivatedException("User " + lowercaseLogin + " is not activated");
+            throw new IllegalStateException("User " + lowercaseLogin + " is not activated");
         }
 
         Collection<GrantedAuthority> grantedAuthorities = new ArrayList<>();

@@ -1,5 +1,3 @@
-Based on: https://github.com/rajithd/spring-boot-oauth2
-
 Fetching access_token and refresh_token
 ---------------------------------------
     http://localhost:9191/api/oauth/token?username=admin&password=admin&grant_type=password                                                         

@@ -1,3 +1,6 @@
+Run with maven using:
+    mvn clean spring-boot:run
+
 Fetching access_token and refresh_token
 ---------------------------------------
     http://localhost:9191/api/oauth/token?username=admin&password=admin&grant_type=password                                                         

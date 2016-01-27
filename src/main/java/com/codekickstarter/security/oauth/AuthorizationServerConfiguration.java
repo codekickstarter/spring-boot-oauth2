@@ -1,4 +1,4 @@
-package be.geoffrey.security.oauth;
+package com.codekickstarter.security.oauth;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;

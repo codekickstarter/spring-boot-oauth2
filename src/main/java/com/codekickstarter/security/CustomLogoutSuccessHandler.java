@@ -1,4 +1,4 @@
-package be.geoffrey.security;
+package com.codekickstarter.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;

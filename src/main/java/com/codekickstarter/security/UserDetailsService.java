@@ -1,8 +1,8 @@
-package be.geoffrey.security;
+package com.codekickstarter.security;
 
-import be.geoffrey.model.Authority;
-import be.geoffrey.model.User;
-import be.geoffrey.repository.UserRepository;
+import com.codekickstarter.model.Authority;
+import com.codekickstarter.model.User;
+import com.codekickstarter.repository.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

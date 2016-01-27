@@ -1,4 +1,4 @@
-package be.geoffrey.security.configuration;
+package com.codekickstarter.security.configuration;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

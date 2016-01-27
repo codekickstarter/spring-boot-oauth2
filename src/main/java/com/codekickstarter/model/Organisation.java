@@ -1,4 +1,4 @@
-package be.geoffrey.model;
+package com.codekickstarter.model;
 
 public class Organisation {
 

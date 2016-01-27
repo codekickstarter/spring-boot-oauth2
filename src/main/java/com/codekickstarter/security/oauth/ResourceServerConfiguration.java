@@ -1,4 +1,4 @@
-package be.geoffrey.security.oauth;
+package com.codekickstarter.security.oauth;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;

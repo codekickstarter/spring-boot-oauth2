@@ -1,6 +1,6 @@
-package be.geoffrey.repository;
+package com.codekickstarter.repository;
 
-import be.geoffrey.model.User;
+import com.codekickstarter.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

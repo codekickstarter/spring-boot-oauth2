@@ -1,4 +1,4 @@
-package be.geoffrey.api;
+package com.codekickstarter.api;
 
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;

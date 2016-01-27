@@ -1,4 +1,4 @@
-package be.geoffrey.security;
+package com.codekickstarter.security;
 
 import org.springframework.security.core.AuthenticationException;
 

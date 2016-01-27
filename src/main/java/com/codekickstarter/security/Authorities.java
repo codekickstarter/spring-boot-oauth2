@@ -1,4 +1,4 @@
-package be.geoffrey.security;
+package com.codekickstarter.security;
 
 public enum Authorities {
     ROLE_USER,

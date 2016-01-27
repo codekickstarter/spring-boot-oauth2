@@ -10,13 +10,12 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.stereotype.Component;
-import org.springframework.transaction.annotation.Transactional;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.Collection;
 
-@Component("userDetailsService")
+@Service
 public class UserDetailsService implements org.springframework.security.core.userdetails.UserDetailsService {
 
     private final Logger log = LoggerFactory.getLogger(UserDetailsService.class);
@@ -25,10 +24,7 @@ public class UserDetailsService implements org.springframework.security.core.use
     private UserRepository userRepository;
 
     @Override
-    @Transactional
     public UserDetails loadUserByUsername(final String login) {
-
-        log.debug("Authenticating {}", login);
         String lowercaseLogin = login.toLowerCase();
 
         User userFromDatabase = userRepository.findByEmail(lowercaseLogin);

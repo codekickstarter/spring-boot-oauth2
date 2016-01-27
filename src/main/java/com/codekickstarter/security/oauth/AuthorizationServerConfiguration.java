@@ -46,18 +46,19 @@ class AuthorizationServerConfiguration extends AuthorizationServerConfigurerAdap
                 .withClient("rw-client")
                 .secret("my-secret")
                 .scopes("read", "write")
-                .authorizedGrantTypes("password", "refresh_token")
+                .authorizedGrantTypes("password")
                 .accessTokenValiditySeconds(1800)
                 .and()
                 .withClient("r-client")
                 .secret("my-secret")
                 .scopes("read")
-                .authorizedGrantTypes("password", "refresh_token")
+                .authorizedGrantTypes("password")
                 .accessTokenValiditySeconds(1800);
     }
 
     @Override
     public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
-        security.allowFormAuthenticationForClients();
+        // Off by default, enable to allow clients to use a client_id and client_secret in the request instead of a basic authentication header
+        // security.allowFormAuthenticationForClients();
     }
 }
